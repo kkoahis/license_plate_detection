@@ -1,0 +1,6 @@
+_pycache_
+runs
+venv
+videos
+.idea
+yolov8n.pt
