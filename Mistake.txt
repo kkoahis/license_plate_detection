@@ -1,0 +1,16 @@
+0: 384x640 1 boat, 74.9ms
+Speed: 1.9ms preprocess, 74.9ms inference, 1.1ms postprocess per image at shape (1, 3, 384, 640)
+Traceback (most recent call last):
+  File "C:\Users\Admin\PycharmProjects\license_plate_detection\main.py", line 54, in <module>
+    track_ids = mot_tracker.update(np.asarray(detections_))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\PycharmProjects\license_plate_detection\sort\sort.py", line 232, in update
+    matched, unmatched_dets, unmatched_trks = associate_detections_to_trackers(dets,trks, self.iou_threshold)
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\PycharmProjects\license_plate_detection\sort\sort.py", line 163, in associate_detections_to_trackers
+    iou_matrix = iou_batch(detections, trackers)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\PycharmProjects\license_plate_detection\sort\sort.py", line 55, in iou_batch
+    yy1 = np.maximum(bb_test[..., 1], bb_gt[..., 1])
+                     ~~~~~~~^^^^^^^^
+IndexError: index 1 is out of bounds for axis 1 with size 1
