@@ -187,8 +187,8 @@ while ret:
 
             print('license plate', license_plate_text)
             print('license plate score', license_plate_text_score)
-            print(coco_model.device)  # In ra thiết bị của mô hình YOLO
-            print(license_plate_detector.device)  # In ra thiết bị của mô hình nhận dạng biển số
+            # print(coco_model.device)  # In ra thiết bị của mô hình YOLO
+            # print(license_plate_detector.device)  # In ra thiết bị của mô hình nhận dạng biển số
 
 
 
