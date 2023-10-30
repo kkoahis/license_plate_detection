@@ -4,3 +4,5 @@ venv
 videos
 .idea
 yolov8n.pt
+test_interpolated.csv
+test.cvs
