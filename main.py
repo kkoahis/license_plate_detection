@@ -122,7 +122,7 @@ coco_model = YOLO('./yolov8n.pt').to("cuda")
 license_plate_detector = YOLO('./models/best.pt').to("cuda")
 
 # load video
-cap = cv2.VideoCapture('./videos/4K Road traffic video for object detection and tracking.mp4')
+cap = cv2.VideoCapture('./videos/IMG_4424.MP4')
 
 vehicles = [2, 3, 5, 7]
 
@@ -152,9 +152,9 @@ while ret:
         # Hiển thị video trong chế độ full màn hình
         cv2.imshow('Detected Video', frame)
 
-        # # Đợi một khoảng thời gian ngắn (vd: 10 ms) và kiểm tra nút bấm "q" để thoát
-        # if cv2.waitKey(10) & 0xFF == ord('q'):
-        #     break
+        # Đợi một khoảng thời gian ngắn (vd: 10 ms) và kiểm tra nút bấm "q" để thoát
+        if cv2.waitKey(10) & 0xFF == ord('q'):
+            break
 
         if detections_:
             # track vehicles
