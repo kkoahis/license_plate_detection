@@ -26,7 +26,8 @@ dict_int_to_char = {'0': 'O',
                     '6': 'G',
                     '5': 'S',
                     '8': 'B',
-                    '9': 'B'}
+                    '9': 'B',
+                    '2': 'Z'}
 
 
 def write_csv(results, output_path):
@@ -44,7 +45,6 @@ def write_csv(results, output_path):
 
         for frame_nmr in results.keys():
             for car_id in results[frame_nmr].keys():
-                print(results[frame_nmr][car_id])
                 if 'car' in results[frame_nmr][car_id].keys() and \
                         'license_plate' in results[frame_nmr][car_id].keys() and \
                         'text' in results[frame_nmr][car_id]['license_plate'].keys():
@@ -296,11 +296,11 @@ def get_car(license_plate, vehicle_track_ids):
         xcar1, ycar1, xcar2, ycar2, car_id = vehicle_track_ids[j]
 
         if x1 > xcar1 and y1 > ycar1 and x2 < xcar2 and y2 < ycar2:
-            car_indx = j
+            car_index = j
             foundIt = True
             break
 
     if foundIt:
-        return vehicle_track_ids[car_indx]
+        return vehicle_track_ids[car_index]
 
     return -1, -1, -1, -1, -1
